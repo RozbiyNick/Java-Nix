@@ -1,0 +1,15 @@
+@startuml Architecture
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+Person(org, "Организация", "Организация, к которой направляются предложения по усовершенствованию")
+Person(initiator, "Инициатор", "Пишет жалобу или предложение по усовершенствованию")
+Person(voter, "Голосующий", "Просматривает список предложенных усовершенствований и голосует")
+System(platform, "In ideas", "Система учёта, публикации и отбора предложений по совершенствованию Организаций")
+
+Rel_R(initiator, org, "Сталкивался с организацией")
+Rel_L(voter, org, "Сталкивался с организацией")
+Rel_D(org, platform, "Реагирует на предложения")
+Rel(initiator, platform, "Создаёт предложение")
+Rel(voter, platform, "Голосует зa предложение")
+@enduml
