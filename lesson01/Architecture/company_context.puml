@@ -1,0 +1,13 @@
+@startuml Architecture
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+Person(staff, "Сотрудник", "Может создавать задачу либо выполнять её")
+Person(client, "Клиент", "Делает заказ")
+System(sys, "Система", "Система трекинга выполнения задач.")
+System_Ext(email, "E-mail", "Отправка сообщений")
+
+Rel(staff, sys, "Получает или посылает задачу")
+Rel(client, sys, "Делает запрос к организации")
+Rel(sys, email, "Отправка сообщений")
+@enduml

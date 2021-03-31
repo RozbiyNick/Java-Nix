@@ -1,0 +1,25 @@
+@startuml High Level Architecture
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+System_Boundary(org, "Организация"){
+    System_Boundary(org_inner1, "Организация"){
+        System_Boundary(org_inner2, "Организация"){
+            System_Boundary(org_inner3, "Организация"){
+                Person(ceo, "Глава", "Руководит организацией")
+                Person(staff1, "Представитель", "1 уровень")
+                Person(staff2, "...", "...")
+                Person(staffn, "Представитель", "n уровень")
+
+                Rel(ceo, staff1,"Контролирует")
+                Rel(staff1, staff2,"Контролирует")
+                Rel(staff2, staffn,"Контролирует")
+
+                System_Boundary(org_inner4, "Организация"){
+                    System(org_inner5, "Организация")
+                }
+            }
+        }
+    }
+}
+
+@enduml
