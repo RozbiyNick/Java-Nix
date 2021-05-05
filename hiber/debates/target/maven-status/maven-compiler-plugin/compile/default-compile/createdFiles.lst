@@ -1,0 +1,14 @@
+debates\servlet\LoginServlet.class
+debates\util\HibernateSessionFactoryUtil.class
+debates\servlet\CommunitiesServlet.class
+debates\servlet\ProfileServlet.class
+debates\servlet\ShowUsersServlet.class
+debates\entities\User.class
+debates\servlet\SignupServlet.class
+debates\servlet\FeedServlet.class
+debates\servlet\IndexServlet.class
+debates\dao\UserDao.class
+debates\auth\Authenticator.class
+debates\entities\Discussion.class
+debates\servlet\CommunityServlet.class
+debates\servlet\DiscussionServlet.class
